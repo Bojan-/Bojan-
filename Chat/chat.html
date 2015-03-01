@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Chat</title>
+  <link rel = "stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <p>
+    Name: <input type="text" name="username" />
+    <svg height="10" width="40" viewbox="-10, 0, 20, 20">
+    <circle cx="10" cy="10" r="10" fill="red" />
+    </svg>
+  <main>
+    <input type="button" value="Редактировать" style="font-size: 100%">
+    <input type="button" value=" Удалить " style="font-size: 100%">
+  </main>
+  <p><p>
+  <textarea rows="30" cols=100% name="history" readonly>
+  </textarea>
+  <p>
+  <form name="input" action="sendmessage.asp" method="get">
+    <input type="text" name="message" size="54" placeholder="Введите сообщение" style="font-size: 100%"/>
+    &nbsp
+    <input type="submit" value=" Отправить " style="font-size: 100%">
+  </form>
+</body>
+</html>
