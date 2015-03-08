@@ -4,6 +4,9 @@ body{
 main {
   position: absolute;
   left: 474px;
-  top: 15px;
+  top: 17px;
   width: 257px;
+}
+textarea {
+  font-size: 120%;
 }

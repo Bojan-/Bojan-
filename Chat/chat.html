@@ -4,25 +4,27 @@
   <meta charset="utf-8">
   <title>Chat</title>
   <link rel = "stylesheet" type="text/css" href="style.css">
+  <script src="scripts.js"></script>
 </head>
-<body>
+<body onload="run();">
   <p>
-    Name: <input type="text" name="username" />
-    <svg height="10" width="40" viewbox="-10, 0, 20, 20">
-    <circle cx="10" cy="10" r="10" fill="red" />
-    </svg>
-  <main>
-    <input type="button" value="Редактировать" style="font-size: 100%">
-    <input type="button" value=" Удалить " style="font-size: 100%">
-  </main>
-  <p><p>
-  <textarea rows="30" cols=100% name="history" readonly>
-  </textarea>
-  <p>
-  <form name="input" action="sendmessage.asp" method="get">
-    <input type="text" name="message" size="54" placeholder="Введите сообщение" style="font-size: 100%"/>
-    &nbsp
-    <input type="submit" value=" Отправить " style="font-size: 100%">
+    <section class="chat">
+      Name: <input id="name" type="text" name="username" style="font-size: 100%" placeholder="Введите имя" />
+      <svg height="10" width="40" viewbox="-10, 0, 20, 20">
+      <circle cx="10" cy="10" r="10" fill="red" />
+      </svg>
+    <main>
+      <input id="change" type="button" value="Редактировать" style="font-size: 100%">
+      <input id="delete" type="button" value=" Удалить " style="font-size: 100%">
+    </main>
+    <p><p>
+    <textarea id="history" rows="25" cols=70 name="history" readonly></textarea>
+    <p>
+    <form name="input" action="sendmessage.asp" method="get">
+      <input type="text" id="message" name="message" size="54" placeholder="Введите сообщение" style="font-size: 100%"/>
+      &nbsp
+      <input id="send" type="submit" value=" Отправить " style="font-size: 100%">
+    </section>
   </form>
 </body>
 </html>
