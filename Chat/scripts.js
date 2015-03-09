@@ -1,12 +1,14 @@
 function run(){
     var history = document.getElementById('history');
 	var appContainer = document.getElementsByClassName('chat')[0];
+	// it is better to use getElementById() in this case when you are goint to get only 1 particular node
 
 	appContainer.addEventListener('click', delegateEvent);
 }
 
 function delegateEvent(evtObj) {
 	if(evtObj.type === 'click'){
+		// switch is better than cascade of if () if () if () if ()
         var temp = document.getElementById('send');
             if (evtObj.target == temp)
 		        onSendMessage(evtObj);
