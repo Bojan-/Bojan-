@@ -6,6 +6,7 @@ main {
   left: 474px;
   top: 17px;
   width: 257px;
+  /*try to replase absulute values defined in pixels with relative ones in %% */
 }
 textarea {
   font-size: 120%;
