@@ -14,16 +14,17 @@
       <circle cx="10" cy="10" r="10" fill="red" />
       </svg>
     <main>
-      <input id="change" type="button" value="Редактировать" style="font-size: 100%">
-      <input id="delete" type="button" value=" Удалить " style="font-size: 100%">
+      <input id="change" type="button" value="Редактировать" style="font-size: 100%" hidden="true">
+      <input id="delete" type="button" value="   Удалить   " style="font-size: 100%" hidden="true">
     </main>
     <p><p>
-    <textarea id="history" rows="25" cols=70 name="history" readonly></textarea>
+    <div class="history" id="history">
+    </div>
     <p>
     <form name="input" action="sendmessage.asp" method="get">
       <input type="text" id="message" name="message" size="54" placeholder="Введите сообщение" style="font-size: 100%"/>
       &nbsp
-      <input id="send" type="submit" value=" Отправить " style="font-size: 100%">
+      <input id="send" type="button" value=" Отправить " style="font-size: 100%">
     </section>
   </form>
 </body>

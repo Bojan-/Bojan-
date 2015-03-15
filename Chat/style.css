@@ -3,10 +3,13 @@ body{
 }
 main {
   position: absolute;
-  left: 474px;
+  left: 451px;
   top: 17px;
-  width: 257px;
+  width: 280px;
 }
-textarea {
-  font-size: 120%;
+.history {
+  background: #B0E0E6;
+  border: solid 1px black;
+  height: 500px;
+  width: 720px;
 }
