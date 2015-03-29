@@ -1,0 +1,15 @@
+GET http://localhost:8888/chat HTTP/1.1
+Host: localhost:8888
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8
+
+
+HTTP/1.1 200 Generated
+Content-Length: 49
+Content-Type: text/plain; charset=utf-8
+
+{"messages" : ["goodbye", "bye"], "token" : "00"}

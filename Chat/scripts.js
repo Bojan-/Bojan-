@@ -136,9 +136,9 @@ function DeleteMessage() {
     document.getElementById('history').removeChild(document.getElementById(id));
     document.getElementById('delete').hidden = true;
     document.getElementById('change').hidden = true;
-    id = -1;
     if (read === 0)
     	localStorage.setItem("History", JSON.stringify(JSON.parse(localStorage.getItem("History")) + "D " + id + "\n"));
+    id = -1;
 }
 
 function ChangeMessage() {
