@@ -82,9 +82,17 @@ function delegateEvent(evtObj) {
 		    	SendMessage();
 		else
 		    	SendChangedMessage();
-	}
-        if (evtObj.target.id < next_id)
+	} else if (evtObj.target.id === "") {
+		document.getElementById('delete').hidden = true;
+    		document.getElementById('change').hidden = true;
+		if (id != -1)
+    		{
+			var mes = document.getElementById(id);
+			mes.innerHTML = mes.name + ": " + mes.value;
+    		}
+	} else if (evtObj.target.id < next_id) {
 		SelectMessage(evtObj);
+	}
         temp = document.getElementById('change');
         if (evtObj.target == temp)
 		ChangeMessage();
