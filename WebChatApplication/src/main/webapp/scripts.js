@@ -7,7 +7,7 @@ var message = function(name, text) {
     return {		
 	user: name.value,
 	messageText: text.value,
-	id: i.toString(),
+	id: i.toString()
     };
 };
 
@@ -16,7 +16,7 @@ var id = -1;
 var messagesList = [];
 
 var appState = {
-    mainUrl : 'http://localhost:1555/chat',
+    mainUrl : 'chat',
     taskList:[],
     token : 'TE11EN'
 };
@@ -186,6 +186,10 @@ function restore(continueWith) {
     });
 }
 
+function uncheked() {
+    document.getElementById('circle').fill = "red";
+}
+
 function get(url, continueWith, continueWithError) {
     ajax('GET', url, null, continueWith, continueWithError);
 }
@@ -235,6 +239,7 @@ function ajax(method, url, data, continueWith, continueWithError) {
 
 	if(isError(xhr.responseText)) {
 	    continueWithError('Error on the server side, response ' + xhr.responseText);
+        uncheked();
 	    return;
 	}
 	if(xhr.responseText) {
@@ -244,16 +249,18 @@ function ajax(method, url, data, continueWith, continueWithError) {
 
     xhr.onimeout = function () {
         continueWithError('Server timed out !');
+        uncheked();
     }
 
     xhr.onerror = function (e) {
-	var errMsg = 'Server connection error !\n'+
-	'\n' +
-	'Check if \n' +
-	'- server is active\n'+
-	'- server sends header "Access-Control-Allow-Origin:*"';
+        var errMsg = 'Server connection error !\n'+
+        '\n' +
+        'Check if \n' +
+        '- server is active\n'+
+        '- server sends header "Access-Control-Allow-Origin:*"';
 
-	continueWithError(errMsg);
+        continueWithError(errMsg);
+        uncheked();
     };
 
     xhr.send(data);
